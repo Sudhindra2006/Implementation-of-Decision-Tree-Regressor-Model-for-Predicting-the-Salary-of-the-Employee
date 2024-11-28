@@ -44,12 +44,13 @@ Program to implement the Decision Tree Regressor Model for Predicting the Salary
 Developed by: Sudhindra.R
 RegisterNumber: 24901168  
 */
-
-
-## Output:
-
-[Screenshot 2024-11-28 163218.pdf](https://github.com/user-attachments/files/17950618/Screenshot.2024-11-28.163218.pdf)
 ```
+
+##Output:
+
+![Screenshot 2024-11-28 163218](https://github.com/user-attachments/assets/3fcfabde-e0d6-4313-b3d7-46d958877d33)
+
+![Screenshot 2024-11-28 163236](https://github.com/user-attachments/assets/e2bb7524-37e4-4f70-a995-62dd59936940)
 
 ## Result:
 Thus the program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee is written and verified using python programming.
