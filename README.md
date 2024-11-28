@@ -1,4 +1,4 @@
-![Screenshot 2024-11-28 024613](https://github.com/user-attachments/assets/63993947-9be7-4a79-b11d-76222f1cf21f)# Implementation-of-Decision-Tree-Regressor-Model-for-Predicting-the-Salary-of-the-Employee
+# Implementation-of-Decision-Tree-Regressor-Model-for-Predicting-the-Salary-of-the-Employee
 
 ## AIM:
 To write a program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
@@ -14,11 +14,31 @@ To write a program to implement the Decision Tree Regressor Model for Predicting
 4. 
 
 ## Program:
-
-![Screenshot 2024-11-28 131401](https://github.com/user-attachments/assets/0580efbd-e1f8-44e5-8c9b-d8825a04dea7)
-
-
 ```
+import pandas as pd
+data=pd.read_csv("Salary.csv")
+data.head()
+data.info()
+data.isnull().sum()
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+data["Position"]=le.fit_transform(data["Position"])
+data.head()
+x=data[["Position","Level"]]
+x.head()
+y=data["Salary"]
+y.head()
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=2)
+from sklearn.tree import DecisionTreeRegressor
+dt=DecisionTreeRegressor()
+dt.fit(x_train,y_train)
+y_pred=dt.predict(x_test)
+y_pred
+r2=metrics.r2_score(y_test,y_pred)
+print("R2 score:",r2)
+dt.predict([[5,6]])
+
 /*
 Program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
 Developed by: Sudhindra.R
@@ -27,7 +47,8 @@ RegisterNumber: 24901168
 ```
 
 ## Output:
-![Screenshot 2024-11-28 024613](https://github.com/user-attachments/assets/74f55366-17aa-498c-bdcb-511f71e0c47f)
+
+[Screenshot 2024-11-28 163218.pdf](https://github.com/user-attachments/files/17950618/Screenshot.2024-11-28.163218.pdf)
 
 
 ## Result:
